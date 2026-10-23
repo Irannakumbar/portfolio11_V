@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #0B1120;
+    --bg-secondary: #111827;
+    --bg-card: #151F32;
+    --text-primary: #F8FAFC;
+    --text-secondary: #A8B3C7;
+    --accent-blue: #3B82F6;
+    --accent-blue-hover: #60A5FA;
+    --border-color: #26344B;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #0B1120;
+    color: #F8FAFC;
+  }
+
+  body {
+    background-color: #0B1120;
+    color: #F8FAFC;
+    overflow-x: hidden;
+  }
+
+  code, kbd, samp, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B1120;
+  border-left: 1px solid #26344B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+  border: 1px solid #26344B;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #28374f;
+  border-color: #3B82F6;
+}
+
+/* Subtle tech grid patterns in Midnight Executive */
+.bg-tech-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(38, 52, 75, 0.4) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(38, 52, 75, 0.4) 1px, transparent 1px);
+}
+
+.bg-radial-gradient {
+  background: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.12) 0%, rgba(11, 17, 32, 0) 70%);
+}
+
+/* Glow effects in Electric Blue */
+.glow-blue {
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.25);
+}
+
+.glow-blue-sm {
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.18);
+}
+
+/* Executive Cards */
+.exec-card {
+  position: relative;
+  background-color: #151F32;
+  border: 1px solid #26344B;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.exec-card:hover {
+  border-color: rgba(59, 130, 246, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px -10px rgba(11, 17, 32, 0.8), 0 0 20px rgba(59, 130, 246, 0.1);
+}
+
+/* Terminal Cursor Blink */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 1s step-start infinite;
+}
+
+/* Subtle Pulse Glow */
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 0.95;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(0.96);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
+}
